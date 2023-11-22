@@ -1,6 +1,7 @@
 -- MariaDB dump 10.19-11.2.0-MariaDB, for Win64 (AMD64)
 --
 -- Host: localhost    Database: krankenhausdb
+-- ------------------------------------------------------
 -- Server version	11.2.0-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -276,4 +277,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-17 14:53:12
+-- Dump completed on 2023-11-17  8:47:54

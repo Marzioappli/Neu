@@ -1,14 +1,14 @@
 import React from 'react';
-import './front.css';
+import './front.css'; //Import CSS File
 
-function AboutUs() {
+function AboutUs() { //Funktion AboutUS Page
   return (
     <div className="about-us-container">
       <section className="About">
         <h1>About Us</h1>
         <p>Unsere Mission ist einfach:<br /><br /> Die beste medizinische Versorgung bieten. Wir setzen auf modernste Technologie und erstklassiges Fachpersonal, um Ihre Gesundheit an erste Stelle zu setzen. Willkommen bei uns – Ihrem Partner für Gesundheit und Wohlbefinden</p> <br /><br />
         <h2>Unser Standort</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.6717160870326!2d8.518444975219879!3d47.35980690498887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a997109bee3e1%3A0xf247b55c5da2ad89!2sZ%C3%BCrcher%20Lehrbetriebsverband%20ICT!5e0!3m2!1sde!2sch!4v1693838245556!5m2!1sde!2sch" width="700" height="300"></iframe><br /><br /><br />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.6717160870326!2d8.518444975219879!3d47.35980690498887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a997109bee3e1%3A0xf247b55c5da2ad89!2sZ%C3%BCrcher%20Lehrbetriebsverband%20ICT!5e0!3m2!1sde!2sch!4v1693838245556!5m2!1sde!2sch" className="google-maps"width="700" height="300"></iframe><br /><br /><br />
         <h2 className='p1'><strong>Unsere Wichtigsten Mitarbeiter:</strong></h2>
       </section>
       <section className="team-section">
@@ -25,7 +25,7 @@ function AboutUs() {
         </div>
 
         <div className="team-member">
-          <img src="https://res.cloudinary.com/deep-impact-ag/image/upload/v1689755890/medinside/230719_MM_Chefa%CC%88rztin_Radiologie_Dr._Alexandra_Janus_tthhk8.jpg" alt="Team Member 3" />
+          <img src="https://res.cloudinary.com/deep-impact-ag/image/upload/v1689755890/medinside/230719_MM_Chefa%CC%88rztin_Radiologie_Dr._Alexandra_Janus_tthhk8.jpg" alt="Team Member 3" /> {/* Bilder von Mitarbeitern*/}
           <h3>Alina Merioso</h3>
           <p>Chef Ärztin</p>
         </div>
@@ -58,4 +58,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default AboutUs; // Export der "AboutUs"-Komponente für den Gebrauch in anderen Dateien

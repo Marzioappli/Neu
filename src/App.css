@@ -36,51 +36,113 @@ body, h1, h2, h3, p {
   color: white;
   font-weight: bold;
 }
-
 .navbar-links a:hover {
   border-bottom: 3px solid rgb(255, 255, 255);
 }
-
-
-
-
-
 .access-form {
   text-align: center;
   padding: 150px;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
 
-.access-form input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  font-size: 16px;
-  border: 2px solid #ff0000;
-  border-radius: 5px;
-  background-color: #f8f8f8;
-  transition: border-color 0.3s;
+
+.titel {
+  color: #333;
+  font-size: 24px;
   margin-bottom: 15px;
+  margin-top: -100px;
 }
 
-.access-form input[type="password"]:focus {
-  border-color: #15ff00;
-  outline: none;
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.datenbutton{
-  background-color: #333;
-  color: #fe0000;
-  font-size: 20px;
-  padding: 15px 30px;
-  border: whitesmoke;
-  border-radius: 35px;
+.datenbutton {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
-.datenbutton:hover{
-  color: #15ff00;
+
+.datenbutton:hover {
+  background-color: #575757;
 }
-.titel{
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    background-color: #333;
+    width: 575px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    width: 110%;
+  }
+
+  .navbar-links li {
+    margin-bottom: 30px;
+    font-size: x-large;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .input-field {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .datenbutton {
+    width: 118%;
+    margin: 5px 0;
+  }
+
+  .titel {
+    width: 100%;
+    margin: 10px 0;
+    font-size: large;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    text-align: center;
+  }
 }

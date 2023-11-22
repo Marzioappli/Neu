@@ -2,6 +2,7 @@ import React from 'react';
 import './front.css';
 
 function Angebotsseite() {
+   // Liste von Angeboten mit Titel, Beschreibung und Preis
     const angebote = [
         {
         title: 'Ganzkörpercheck',
@@ -36,9 +37,9 @@ function Angebotsseite() {
     ];
 
   return (
-    <div className="angebotsseite">
+    <div className="angebotsseite"> {/* Container für die Angebotsseite */}
       <h1>Unsere Angebote</h1>
-      <div className="angebote-liste">
+      <div className="angebote-liste"> {/* Liste der Angebote */}
         {angebote.map((angebot, index) => (
           <div key={index} className="angebot">
             <h2>{angebot.title}</h2>

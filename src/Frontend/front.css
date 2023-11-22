@@ -245,9 +245,7 @@ button {
   color: #666;
   margin-top: 10px;
 }
-.mission {
-  box-shadow: 20px 15px 5px rgba(117, 117, 117, 0.2);
-}
+
 .mission h2{
   text-align: center;
   padding: 20px 0;
@@ -328,6 +326,46 @@ body {
     border-image-source: linear-gradient(45deg, #ffffff, #a4a4a4, #000000);
   }
 }
+@media (max-width: 768px) {
+  .team-member {
+    flex: 1 0 55%;
+    height: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .google-maps, img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  p, h2, h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .angebotsseite {
+    text-align: center;
+  }
+
+  .angebotsseite .angebote-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .angebotsseite .angebot {
+    flex: 1 0 300px;
+    margin: 10px;
+    text-align: left;
+
+    padding: 10px;
+    transition: box-shadow 0.3s ease; /* Fügt den Hover-Effekt hinzu */
+  }
+}
+
 
 
 

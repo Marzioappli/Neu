@@ -3,6 +3,7 @@ import "whatwg-fetch";
 import "./patienten.css";
 
 const Verwaltung = () => {
+  // Zustände für die verschiedenen Daten
   const [patienten, setPatienten] = useState([]);
   const [arzteData, setAerzteData] = useState([]);
   const [abteilungen, setAbteilungen] = useState([]);
@@ -12,8 +13,19 @@ const Verwaltung = () => {
   const [behandlungenar, setBehandlungenar] = useState([]);
   const [editRowIndex, setEditRowIndex] = useState(-1);
 
+
+  const [userCredentials, setUserCredentials] = useState({
+    // Benutzereingaben
+    Vorname: "",
+    Nachname: "",
+    Alter: "",
+    Fach: "",
+  });
+
+  // Daten beim Laden der Komponente abrufen
   useEffect(() => {
     const fetchData = async () => {
+      // Verschiedene Datenquellen
       try {
         const responsePatienten = await fetch(
           "http://localhost:5000/patienten"
@@ -32,7 +44,7 @@ const Verwaltung = () => {
         const responseBehandlungenArzte = await fetch(
           "http://localhost:5000/behandlungen_arzte"
         );
-
+        // Daten in JSON konvertieren und in den Zuständen speichern
         const dataPatienten = await responsePatienten.json();
         const dataArzte = await responseArzte.json();
         const dataAbteilungen = await responseAbteilungen.json();
@@ -56,6 +68,7 @@ const Verwaltung = () => {
     fetchData();
   }, []);
 
+  // Funktionen zur Bearbeitung, Speicherung und Löschung von Daten
   const handleEdit = (index, table) => {
     setEditRowIndex(index);
   };
@@ -147,16 +160,6 @@ const Verwaltung = () => {
       }
 
       setEditRowIndex(-1); // Zurücksetzen des Bearbeitungsmodus
-
-      // Hier die aktualisierten Daten an den Server senden (für alle Tabellen)
-      // Beispiel:
-      // await fetch(`http://localhost:5000/${table}/${updatedRow.id}`, {
-      //   method: "PUT",
-      //   body: JSON.stringify(updatedRow),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
     } catch (error) {
       console.error("Fehler beim Speichern der Daten:", error);
     }
@@ -235,17 +238,12 @@ const Verwaltung = () => {
         default:
           break;
       }
-
-      // Hier die Löschungsanfrage an den Server senden (für alle Tabellen)
-      // Beispiel:
-      // await fetch(`http://localhost:5000/${table}/${item.id}`, {
-      //   method: "DELETE",
-      // });
     } catch (error) {
       console.error("Fehler beim Löschen der Daten:", error);
     }
   };
 
+// Darstellung der Tabellen für die verschiedenen Daten
   return (
     <div>
       {/* Patienten */}
@@ -699,8 +697,8 @@ const Verwaltung = () => {
           </thead>
           <tbody>
             {behandlungenar.map((item, index) => (
-              <tr key={item.Behandlungs_Ärzte_ID}>
-                <td>{item.Behandlungs_Ärzte_ID}</td>
+              <tr key={item.Behandlungs_arzte_ID}>
+                <td>{item.Behandlungs_arzte_ID}</td>
                 {editRowIndex === index ? (
                   <>
                     <td>

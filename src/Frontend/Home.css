@@ -1,26 +1,69 @@
-.background{
-    background-color: antiquewhite;
+/* Hintergrundstil für Elemente mit der Klasse .background */
+
+
+/* Flex-Stil für die Zentrierung von Inhalten */
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Stil für Elemente mit der Klasse .hallo */
+.hallo {
+  order: 1;
+  flex-basis: 100%;
+  margin-top: -400px;
+  margin-left: 500px;
+}
+.img-fluid{
+  margin-left: -600px;
+}
+
+/* Textausrichtung am Ende für Elemente mit der Klasse .text-lg-end */
+.text-lg-end {
+  text-align: end;
+}
+
+/* Textausrichtung in der Mitte für Elemente mit der Klasse .text-center */
+.text-center {
+  text-align: center;
+}
+
+/* Stil für Buttons mit der Klasse .button-1 */
+.button-1 {
+  color: white;
+  background-color: #333;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-items-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles für kleinere Bildschirme hier */
+  .container{
+    display: block;
   }
-  
-  .align-items-center {
-    display: flex;
-    align-items: center;
+
+  .img-fluid{
+    margin-top: 10px;
+    height: 400px;
+    margin-left: 0px;
   }
-  
   .hallo {
-    order: 1;
-    flex-basis: 100%;
-  }
-  
-  .text-lg-end {
-    text-align: end;
-  }
-  
-  .text-center {
+    margin-top: 70px;
+    margin-left: 00px;
+    margin-bottom: 20px;
     text-align: center;
   }
   .button-1{
-    color: white;
-    background-color: #333;
-    padding: 10px;
+    margin-bottom: 20px;
   }
+}

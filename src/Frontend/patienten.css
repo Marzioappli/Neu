@@ -1,89 +1,119 @@
+/* Stil für das Zentrieren von Inhalten in der Mitte des Bildschirms */
 .center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 850px;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  thead {
-    background-color: #f2f2f2;
-  }
-  
-  tr:hover {
-    background-color: #f5f5f5;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* 80% der Bildschirmhöhe */
+}
+
+/* Stil für Tabellen */
+table {
+  border-collapse: collapse;
+  width: 80%; /* 80% der Breite des übergeordneten Containers */
+  max-width: 850px; /* Maximale Breite auf 850 Pixel begrenzt */
+  margin-top: 20px; /* Oberer Abstand von 20 Pixeln */
+}
+
+/* Stil für Tabellenzellen (Header und Datenzellen) */
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Stil für den Tabellenkopf */
+thead {
+  background-color: #f2f2f2;
+}
+
+/* Stil für Zeilen im Tabellenhover */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Stil für einen Lösch-Button */
 .delete-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Stil für einen Bearbeiten-Button */
+.edit-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Stil für ein Symbol vor dem Bearbeiten-Button */
+.edit-button::before {
+  font-family: "Font Awesome 5 Free"; /* Verwendet eine Font Awesome 5 Free-Schriftart */
+  margin-right: 7px;
+}
+
+/* Stil für einen Speichern-Button */
+.save-button {
+  background-color: rgb(142, 142, 142);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Stil für ein Symbol vor dem Speichern-Button */
+.save-button::before {
+  font-family: "Font Awesome 5 Free"; /* Verwendet eine Font Awesome 5 Free-Schriftart */
+  margin-right: 7px;
+}
+
+/* Stil für einen Abbrechen-Button */
+.cancel-button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Stil für ein Symbol vor dem Abbrechen-Button */
+.cancel-button::before {
+  font-family: "Font Awesome 5 Free"; /* Verwendet eine Font Awesome 5 Free-Schriftart */
+  margin-right: 7px;
+}
+
+/* Stil für ein Symbol vor dem Lösch-Button */
+.delete-button::before {
+  content: "\f7f9"; /* Fügt ein spezifisches Font Awesome-Symbol hinzu */
+  font-family: "Font Awesome 5 Free"; /* Verwendet eine Font Awesome 5 Free-Schriftart */
+  margin-right: 7px;
+}
+
+/* Zusätzlicher Abstand für das Zentrieren von Inhalten */
+.center-content {
+  margin-top: 200px;
+  margin-bottom: 380px;
+}
+
+@media (max-width: 768px) {
+  .center-content{
+    height: 450px;
+    width: 760px;
   }
-  .edit-button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-  }
-  .edit-button::before {
-    font-family: "Font Awesome 5 Free";
-    margin-right: 7px;
-  }
-  .save-button {
-    background-color: rgb(142, 142, 142);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-  }
-  .save-button::before {
-    font-family: "Font Awesome 5 Free";
-    margin-right: 7px;
-  }
-  .cancel-button {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-  }
-  .cancel-button::before {
-    font-family: "Font Awesome 5 Free";
-    margin-right: 7px;
-  }
-  .delete-button::before {
-    content: "\f7f9";
-    font-family: "Font Awesome 5 Free";
-    margin-right: 7px;
-  }
-  .center-content {
-    margin-top: 200px;
-    margin-bottom: 380px;
-  }
+}
